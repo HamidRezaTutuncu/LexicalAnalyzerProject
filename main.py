@@ -18,6 +18,14 @@ class LexicalGui:
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+    def setup_ui(self):
+        # Başlık
+        title_label = tk.Label(
+            self.root,
+            text="Sözcüksel Çözümleyici (Değişken Denetimi)",
+            font=self.title_font, bg="#f4f7f6", fg="#2c3e50"
+        )
+        title_label.pack(pady=20)
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
