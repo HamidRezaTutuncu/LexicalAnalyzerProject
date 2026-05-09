@@ -27,9 +27,9 @@ class LexicalGui:
         )
         title_label.pack(pady=20)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+        # Giriş Alanı Çerçevesi
+        input_frame = tk.Frame(self.root, bg="#f4f7f6")
+        input_frame.pack(pady=10)
 
 
 # Press the green button in the gutter to run the script.
