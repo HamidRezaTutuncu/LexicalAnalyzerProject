@@ -32,8 +32,10 @@ class LexicalGui:
         input_frame.pack(pady=10)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+        self.entry = tk.Entry(
+            input_frame, font=("Calibri", 13), width=30,
+            relief="flat", highlightthickness=1, highlightbackground="#bdc3c7"
+        )
+        self.entry.pack(pady=10, ipady=5)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
