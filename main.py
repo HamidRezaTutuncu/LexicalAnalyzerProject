@@ -39,3 +39,25 @@ class LexicalGui:
         self.entry.pack(pady=10, ipady=5)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+        # Alt Bilgi (Hocanın istediği Ad-Soyad görünürlüğü)
+        footer = tk.Label(
+            self.root, text="Hamid Tütüncü - BLG306 Projesi",
+            font=("Calibri", 9), bg="#f4f7f6", fg="#95a5a6"
+        )
+        footer.pack(side="bottom", pady=10)
+
+    def handle_analysis(self):
+        val = self.entry.get().strip()
+        is_valid, msg = self.analyzer.check_variable(val)
+
+        if is_valid:
+            messagebox.showinfo("Sonuç", f"✅ {msg}")
+        else:
+            messagebox.showerror("Hata", f"❌ {msg}")
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = LexicalGui(root)
+    root.mainloop()
