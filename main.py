@@ -15,8 +15,7 @@ class LexicalGui:
         self.title_font = font.Font(family="Calibri", size=16, weight="bold")
         self.label_font = font.Font(family="Calibri", size=12)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+        self.setup_ui()
 
     def setup_ui(self):
         # Başlık
@@ -31,6 +30,7 @@ class LexicalGui:
         input_frame = tk.Frame(self.root, bg="#f4f7f6")
         input_frame.pack(pady=10)
 
+        tk.Label(input_frame, text="Değişken İsmini Girin:", font=self.label_font, bg="#f4f7f6").pack()
 
         self.entry = tk.Entry(
             input_frame, font=("Calibri", 13), width=30,
@@ -38,11 +38,17 @@ class LexicalGui:
         )
         self.entry.pack(pady=10, ipady=5)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        # Analiz Butonu
+        self.btn_analyze = tk.Button(
+            self.root, text="ANALYZE", command=self.handle_analysis,
+            bg="#3498db", fg="white", font=("Calibri", 11, "bold"),
+            width=15, relief="flat", cursor="hand2", activebackground="#2980b9"
+        )
+        self.btn_analyze.pack(pady=20)
 
         # Alt Bilgi (Hocanın istediği Ad-Soyad görünürlüğü)
         footer = tk.Label(
-            self.root, text="Hamid Tütüncü - BLG306 Projesi",
+            self.root, text="HAMIDREZA TOUTOUNCHI- BLG306 Projesi",
             font=("Calibri", 9), bg="#f4f7f6", fg="#95a5a6"
         )
         footer.pack(side="bottom", pady=10)
